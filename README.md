@@ -6,7 +6,7 @@ intelligence service has detected a call for help from an Imperial cargo ship ad
 asteroid field. The ship's manifest is ultra-classified, but is rumored to carry rations and
 weaponry for an entire legion.
 
-##Instalacción 
+## Instalacción 
 
 Instalamos dependencias
 
