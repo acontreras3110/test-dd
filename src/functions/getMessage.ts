@@ -7,7 +7,6 @@ export default async (
     messages: string[]
 ): Promise<message> => {
 
-    console.log(messages)
     // agregamos el primer arreglo de string
     let messageFinal: any = messages[0];
 

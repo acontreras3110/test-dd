@@ -8,11 +8,12 @@ provider:
 
 plugins:
   - serverless-plugin-typescript
+  - serverless-offline
 
 functions:
   topsecret:
     handler: src/handlers/topsecret.topSecret
     events:
-          - httpApi:
-              path: /topsecret
-              method: post
+      - httpApi:
+          path: /topsecret
+          method: post
