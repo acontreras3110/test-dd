@@ -1,10 +1,9 @@
 export interface coordinates {
-    x: number;
-    y: number;
-    messages: string[]
+	x: number;
+	y: number;
+	messages: string[];
 }
 
 export interface message {
-    msg: string
+	msg: string;
 }
-
