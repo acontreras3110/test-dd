@@ -1,5 +1,5 @@
-import { coordinates } from '../model/test/type';
-import { POSITION } from '../model/test/consts';
+import { coordinates } from '../model/topsecret/type';
+import { POSITION } from '../model/topsecret/consts';
 
 // input: distance to the transmitter as it is received on each satellite
 // output: the 'x' and 'y' coordinates of the sender of the message
