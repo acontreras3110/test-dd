@@ -2,7 +2,7 @@
 
 import getMessage from '../functions/getMessage';
 import getLocation from '../functions/getLocation';
-import isValidSatellite from '../joi';
+import isValidSatellite from '../model/test/joi';
 
 module.exports.topSecret = async (event, context, callback) => {
 	context.callbackWaitsForEmptyEventLoop = false;
