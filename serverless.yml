@@ -12,8 +12,15 @@ plugins:
 
 functions:
   topsecret:
-    handler: src/handlers/topsecret.topSecret
+    handler: src/handlers/POST/topsecret.topSecret
     events:
       - httpApi:
           path: /topsecret
           method: post
+
+  serviceGET:
+    handler: src/handlers/GET/handlerGET.serviceGET
+    events:
+      - httpApi:
+          path: /serviceGET
+          method: get

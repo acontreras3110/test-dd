@@ -1,8 +1,8 @@
 'use strict';
 
-import getMessage from '../functions/getMessage';
-import getLocation from '../functions/getLocation';
-import isValidSatellite from '../model/topsecret/joi';
+import getMessage from '../../functions/getMessage';
+import getLocation from '../../functions/getLocation';
+import isValidSatellite from '../../model/topsecret/joi';
 
 module.exports.topSecret = async (event, context, callback) => {
 	context.callbackWaitsForEmptyEventLoop = false;
