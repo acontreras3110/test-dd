@@ -8,12 +8,16 @@ module.exports.topSecret = async (event, context, callback) => {
 	context.callbackWaitsForEmptyEventLoop = false;
 
 	try {
+		//antes de procesar la funcion validamos que los datos ingresados en el
+		//JSON del POST son los correctos y cumplen con el formato establecido.
 		const { error } = isValidSatellite.validate(JSON.parse(event.body));
 
 		if (!error) {
 			const { satellites } = JSON.parse(event.body);
 			const position = await getLocation(satellites);
 
+			//si la nave se encuentra muy lejos y el mensaje no pudo formarse,
+			//este no retornara ningun mensaje
 			if (position.messages.length) {
 				const message = await getMessage(position.messages);
 
@@ -47,7 +51,7 @@ module.exports.topSecret = async (event, context, callback) => {
 				},
 				body: JSON.stringify({
 					success: false,
-					message: `message not found.`,
+					message: `invalid data entered.`,
 					details: error.details,
 				}),
 			});
@@ -60,7 +64,7 @@ module.exports.topSecret = async (event, context, callback) => {
 			},
 			body: JSON.stringify({
 				success: false,
-				message: `messages obtained are not the same.`,
+				message: `unhandled error.`,
 			}),
 		});
 	}
