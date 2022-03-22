@@ -19,3 +19,9 @@ export interface coordinates {
 export interface message {
 	msg: string;
 }
+
+export interface infoSatellites {
+	name: string;
+	distance: number;
+	message: string[];
+}

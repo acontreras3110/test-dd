@@ -1,4 +1,4 @@
-import { coordinates } from '../model/topsecret/type';
+import { coordinates, infoSatellites } from '../model/topsecret/type';
 import { POSITION } from '../model/topsecret/consts';
 
 // input: distance to the transmitter as it is received on each satellite
@@ -10,9 +10,10 @@ import { POSITION } from '../model/topsecret/consts';
 //voy a modificar un poco esta función para no dejarla inutulizada
 // voy a modificar un poco esta función para no dejarla inutulizada
 
-export default async (satellites: any[]): Promise<coordinates> => {
+export default async (satellites: infoSatellites[]): Promise<coordinates> => {
 	const messages: any = [];
 
+	console.log(satellites);
 	//realizamos una funcion matematica que permite calcular la distancia entre dos puntos
 	const distance = (x1: number, y1: number, x2: number, y2: number) => {
 		let y = x2 - x1;
